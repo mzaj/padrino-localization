@@ -34,7 +34,7 @@ module Padrino
           locale_scope = ::I18n.locale unless Padrino::Localization::Middleware.languages.include?(locale_scope.to_s)
           args << opts
           link = url_without_locale *args
-          link.insert(0,"/#{locale_scope}") if (locale_scope.to_s != ::I18n.default_locale.to_s)
+          link.insert(0,"/#{locale_scope}")
           link
         end
 
